@@ -1,0 +1,353 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Converter_ACDC:HLK-PM01 PS1
+U 1 1 60684A24
+P 2250 6700
+F 0 "PS1" H 2250 7025 50  0000 C CNN
+F 1 "HLK-PM01" H 2250 6934 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_HiLink_HLK-PMxx" H 2250 6400 50  0001 C CNN
+F 3 "http://www.hlktech.net/product_detail.php?ProId=54" H 2650 6350 50  0001 C CNN
+	1    2250 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 6069CEC3
+P 3400 3800
+F 0 "J2" H 3480 3792 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 3480 3701 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 3400 3800 50  0001 C CNN
+F 3 "~" H 3400 3800 50  0001 C CNN
+	1    3400 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 606A8A70
+P 1300 6700
+F 0 "J1" H 1218 6375 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 1218 6466 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 1300 6700 50  0001 C CNN
+F 3 "~" H 1300 6700 50  0001 C CNN
+	1    1300 6700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1500 6600 1850 6600
+Wire Wire Line
+	1500 6700 1500 6800
+Wire Wire Line
+	1500 6800 1850 6800
+Wire Wire Line
+	2850 3600 3200 3600
+Wire Wire Line
+	3200 3600 3200 3800
+Wire Wire Line
+	2750 4200 3200 4200
+Wire Wire Line
+	3200 4200 3200 3900
+$Comp
+L Diode:1N4001 D2
+U 1 1 606AC632
+P 1750 3900
+F 0 "D2" V 1704 3980 50  0000 L CNN
+F 1 "1N4001" V 1795 3980 50  0000 L CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 1750 3725 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 1750 3900 50  0001 C CNN
+	1    1750 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2350 3600 1750 3600
+Wire Wire Line
+	1750 3600 1750 3750
+$Comp
+L Relay:FINDER-36.11 K1
+U 1 1 606C122C
+P 2550 3900
+F 0 "K1" H 2980 3946 50  0000 L CNN
+F 1 "FINDER-36.11" H 2980 3855 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_Finder_36.11" H 3820 3870 50  0001 C CNN
+F 3 "https://gfinder.findernet.com/public/attachments/36/EN/S36EN.pdf" H 2550 3900 50  0001 C CNN
+	1    2550 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q1
+U 1 1 606A4357
+P 1650 4400
+F 0 "Q1" H 1841 4446 50  0000 L CNN
+F 1 "BC547" H 1841 4355 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SC-59" H 1850 4325 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 1650 4400 50  0001 L CNN
+	1    1650 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 4050 1750 4200
+Wire Wire Line
+	1750 4200 2350 4200
+Connection ~ 1750 4200
+$Comp
+L power:GND #PWR0101
+U 1 1 606B835D
+P 1750 4600
+F 0 "#PWR0101" H 1750 4350 50  0001 C CNN
+F 1 "GND" H 1755 4427 50  0000 C CNN
+F 2 "" H 1750 4600 50  0001 C CNN
+F 3 "" H 1750 4600 50  0001 C CNN
+	1    1750 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0102
+U 1 1 606B8EB5
+P 1750 3600
+F 0 "#PWR0102" H 1750 3450 50  0001 C CNN
+F 1 "+5V" H 1765 3773 50  0000 C CNN
+F 2 "" H 1750 3600 50  0001 C CNN
+F 3 "" H 1750 3600 50  0001 C CNN
+	1    1750 3600
+	1    0    0    -1  
+$EndComp
+Connection ~ 1750 3600
+Text GLabel 850  4400 0    50   Input ~ 0
+IN1
+Text GLabel 9150 3200 2    50   Input ~ 0
+IN1
+$Comp
+L power:GND #PWR0103
+U 1 1 606C0966
+P 9150 5200
+F 0 "#PWR0103" H 9150 4950 50  0001 C CNN
+F 1 "GND" H 9155 5027 50  0000 C CNN
+F 2 "" H 9150 5200 50  0001 C CNN
+F 3 "" H 9150 5200 50  0001 C CNN
+	1    9150 5200
+	1    0    0    -1  
+$EndComp
+Text GLabel 9150 2900 2    50   Input ~ 0
+3V
+Text GLabel 2400 5350 2    50   Input ~ 0
+3V
+$Comp
+L Regulator_Linear:AMS1117-3.3 U2
+U 1 1 606C3EA3
+P 2100 5350
+F 0 "U2" H 2100 5592 50  0000 C CNN
+F 1 "AMS1117-3.3" H 2100 5501 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 2100 5550 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 2200 5100 50  0001 C CNN
+	1    2100 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 606C9873
+P 2100 5650
+F 0 "#PWR0104" H 2100 5400 50  0001 C CNN
+F 1 "GND" H 2105 5477 50  0000 C CNN
+F 2 "" H 2100 5650 50  0001 C CNN
+F 3 "" H 2100 5650 50  0001 C CNN
+	1    2100 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0105
+U 1 1 606CA146
+P 1800 5350
+F 0 "#PWR0105" H 1800 5200 50  0001 C CNN
+F 1 "+5V" V 1815 5478 50  0000 L CNN
+F 2 "" H 1800 5350 50  0001 C CNN
+F 3 "" H 1800 5350 50  0001 C CNN
+	1    1800 5350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 606DC6C5
+P 2650 6800
+F 0 "#PWR0106" H 2650 6550 50  0001 C CNN
+F 1 "GND" H 2655 6627 50  0000 C CNN
+F 2 "" H 2650 6800 50  0001 C CNN
+F 3 "" H 2650 6800 50  0001 C CNN
+	1    2650 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0107
+U 1 1 606DCCA8
+P 2650 6600
+F 0 "#PWR0107" H 2650 6450 50  0001 C CNN
+F 1 "+5V" H 2665 6773 50  0000 C CNN
+F 2 "" H 2650 6600 50  0001 C CNN
+F 3 "" H 2650 6600 50  0001 C CNN
+	1    2650 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 606FA3A1
+P 1300 4400
+F 0 "R1" V 1093 4400 50  0000 C CNN
+F 1 "R" V 1184 4400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1230 4400 50  0001 C CNN
+F 3 "~" H 1300 4400 50  0001 C CNN
+	1    1300 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 606FD3E3
+P 1000 4400
+F 0 "D1" H 993 4145 50  0000 C CNN
+F 1 "LED" H 993 4236 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 1000 4400 50  0001 C CNN
+F 3 "~" H 1000 4400 50  0001 C CNN
+	1    1000 4400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW2
+U 1 1 6070AC9D
+P 9800 3350
+F 0 "SW2" V 9846 3302 50  0000 R CNN
+F 1 "SW_Push" V 9755 3302 50  0000 R CNN
+F 2 "Button_Switch_SMD:SW_SPST_EVQQ2" H 9800 3550 50  0001 C CNN
+F 3 "~" H 9800 3550 50  0001 C CNN
+	1    9800 3350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9150 3100 9800 3100
+Wire Wire Line
+	9800 3100 9800 3150
+$Comp
+L power:GND #PWR0108
+U 1 1 6070FF8C
+P 9800 3550
+F 0 "#PWR0108" H 9800 3300 50  0001 C CNN
+F 1 "GND" H 9805 3377 50  0000 C CNN
+F 2 "" H 9800 3550 50  0001 C CNN
+F 3 "" H 9800 3550 50  0001 C CNN
+	1    9800 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 607113B9
+P 9800 2950
+F 0 "R3" H 9730 2904 50  0000 R CNN
+F 1 "R" H 9730 2995 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9730 2950 50  0001 C CNN
+F 3 "~" H 9800 2950 50  0001 C CNN
+	1    9800 2950
+	-1   0    0    1   
+$EndComp
+Connection ~ 9800 3100
+Text GLabel 9800 2800 1    50   Input ~ 0
+3V
+Text GLabel 7150 2650 1    50   Input ~ 0
+3V
+$Comp
+L Device:R R2
+U 1 1 6074CFB1
+P 7150 2800
+F 0 "R2" H 7080 2754 50  0000 R CNN
+F 1 "R" H 7080 2845 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7080 2800 50  0001 C CNN
+F 3 "~" H 7150 2800 50  0001 C CNN
+	1    7150 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 6074D54B
+P 7150 3150
+F 0 "SW1" V 7196 3102 50  0000 R CNN
+F 1 "SW_Push" V 7105 3102 50  0000 R CNN
+F 2 "Button_Switch_SMD:SW_SPST_EVQQ2" H 7150 3350 50  0001 C CNN
+F 3 "~" H 7150 3350 50  0001 C CNN
+	1    7150 3150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 6074DD75
+P 7150 3350
+F 0 "#PWR0109" H 7150 3100 50  0001 C CNN
+F 1 "GND" H 7155 3177 50  0000 C CNN
+F 2 "" H 7150 3350 50  0001 C CNN
+F 3 "" H 7150 3350 50  0001 C CNN
+	1    7150 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 3100 7550 2950
+Wire Wire Line
+	7550 2950 7150 2950
+Connection ~ 7150 2950
+$Comp
+L esp-wroom-32:ESP32-WROOM-32 U1
+U 1 1 60694A9C
+P 8350 4000
+F 0 "U1" H 8350 5367 50  0000 C CNN
+F 1 "ESP32-WROOM-32" H 8350 5276 50  0000 C CNN
+F 2 "esp-wroom-32:ESPWROOM32D" H 8350 4000 50  0001 L BNN
+F 3 "" H 8350 4000 50  0001 L BNN
+F 4 "None" H 8350 4000 50  0001 L BNN "Price"
+F 5 "Bluetooth, WiFi 802.11b/g/n, Bluetooth v4.2 +EDR, Class 1, 2 and 3 Transceiver Module 2.4GHz ~ 2.5GHz Antenna Not Included, U.FL Surface Mount" H 8350 4000 50  0001 L BNN "Description"
+F 6 "Espressif Systems" H 8350 4000 50  0001 L BNN "MF"
+F 7 "ESP32-WROOM-32" H 8350 4000 50  0001 L BNN "MP"
+F 8 "Module Espressif Systems" H 8350 4000 50  0001 L BNN "Package"
+F 9 "Unavailable" H 8350 4000 50  0001 L BNN "Availability"
+	1    8350 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J3
+U 1 1 607AC80D
+P 5350 4300
+F 0 "J3" H 5458 4581 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 5458 4490 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 5350 4300 50  0001 C CNN
+F 3 "~" H 5350 4300 50  0001 C CNN
+	1    5350 4300
+	1    0    0    -1  
+$EndComp
+Text GLabel 5550 4300 2    50   Input ~ 0
+TX
+Text GLabel 7550 4000 0    50   Input ~ 0
+TX
+Text GLabel 7550 4100 0    50   Input ~ 0
+RX
+Text GLabel 5550 4400 2    50   Input ~ 0
+RX
+$Comp
+L power:GND #PWR0110
+U 1 1 607AECCF
+P 5550 4500
+F 0 "#PWR0110" H 5550 4250 50  0001 C CNN
+F 1 "GND" H 5555 4327 50  0000 C CNN
+F 2 "" H 5550 4500 50  0001 C CNN
+F 3 "" H 5550 4500 50  0001 C CNN
+	1    5550 4500
+	1    0    0    -1  
+$EndComp
+Text GLabel 5550 4200 2    50   Input ~ 0
+3V
+$EndSCHEMATC
